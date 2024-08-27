@@ -127,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1,\r\n    \"method\": \"findstorage\",\r\n    \"params\": [2, \"AQ==\", 0]\r\n}",
+					"raw": "{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"id\": 1,\r\n  \"method\": \"getapplicationlog\",\r\n  \"params\": [\r\n    \"0x7da6ae7ff9d0b7af3d32f3a2feb2aa96c2a27ef8b651f9a132cfaad6ef20724c\"\r\n  ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -149,7 +149,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n   \"jsonrpc\": \"2.0\",\r\n   \"method\": \"getbestblockhash\",\r\n   \"params\":[],\r\n   \"id\": 1\r\n}",
+					"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"method\": \"getbestblockhash\",\r\n    \"params\": [],\r\n    \"id\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
