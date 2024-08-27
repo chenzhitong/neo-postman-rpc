@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "9c0b66ec-bc1a-4b47-8858-9a82ed88cb9d",
+		"name": "RpcServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "calculatenetworkfee",
+			"id": "6466987f-cb18-428b-b19b-96f86f89d396",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"method\": \"calculatenetworkfee\",\r\n  \"params\": [\"AAzUzgl2c4kAAAAAAMhjJAAAAAAAmRQgAAKDHlc9J/rM4KzhpixYX/fRkt2q8ACBubhEJKzaXrq9mt5PesW40qC01AEAXQMA6HZIFwAAAAwUgx5XPSf6zOCs4aYsWF/30ZLdqvAMFIG5uEQkrNpeur2a3k96xbjSoLTUE8AMCHRyYW5zZmVyDBS8r0HWhMfUrW7g2Z2pcHudHwyOZkFifVtSOAJCDED0lByRy1/NfBDdKCFLA3RKAY+LLVeXAvut42izfO6PPsKX0JeaL959L0aucqcxBJfWNF3b+93mt9ItCxRoDnChKQwhAuj/F8Vn1i8nT+JHzIhKKmzTuP0Nd5qMWFYomlYKzKy0C0GVRA14QgxAMbiEtF4zjCUjGAzanxLckFiCY3DeREMGIxyerx5GCG/Ki0LGvNzbvPUAWeVGvbL5TVGlK55VfZECmy8voO1LsisRDCEC6P8XxWfWLydP4kfMiEoqbNO4/Q13moxYViiaVgrMrLQRC0ETje+v\"],\r\n  \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "",
+				"description": "Calculates network fee for the specified transaction.\n\nBefore you can invoke this method you must install the plugin [RpcServer](https://github.com/neo-project/neo-modules/releases).\n\n## Parameter Description\n\ntx: Base64-encoded string of transaction information."
+			},
+			"response": []
+		},
+		{
+			"name": "closewallet",
+			"id": "a41b8623-8bf5-4801-8d43-fd251af421d0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"method\": \"closewallet\",\r\n  \"params\": [],\r\n  \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"description": "StartFragmentCloses the current wallet.EndFragment\n\nBefore you can invoke this method you must:\n\n1. Install the plugin [RpcServer](https://github.com/neo-project/neo-modules/releases)\n    \n2. Call the RPC method `openwallet` to open the wallet first."
+			},
+			"response": []
+		},
+		{
+			"name": "dumpprivkey",
+			"id": "c2c88c0d-ee60-40f9-bf84-1822ddda65d6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"method\": \"dumpprivkey\",\r\n  \"params\": [\"NepVckSSgHJf1szQ6LEibd5NU7Ap67yJrJ\"],\r\n  \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"description": "Exports the private key of the specified address.\n\nBefore you can invoke this method you must:\n\n1. Install the plugin [RpcServer](https://github.com/neo-project/neo-modules/releases)\n    \n2. Call the RPC method `openwallet` to open the wallet first."
+			},
+			"response": []
+		},
+		{
+			"name": "findstates",
+			"id": "3b27b62f-6520-42cc-a12a-f73a1d08a1c4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"method\": \"findstates\",\r\n  \"params\": [\"0xec31cdb14da4143e2ab471a8b5812d895b88fc1c12d54e112791491feca9b5f4\",\"0xb1fbb6b0096919071769906bb23b2ca2ec51eea7\",\"AQE=\"],\r\n  \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"description": "Queries the desired state by the root hash, contract hash and storage key prefix.  \nYou must install the plugin [RpcServer](https://github.com/neo-project/neo-modules/releases) before you can invoke the method.\n\n## Parameters\n\n- roothash: The root hash of state root.\n    \n- scripthash: The contract hash。\n    \n- prefix: The prefix of storage key, Base64-encoded.\n    \n- key: Optional. Returns the Base64-encoded key at the start of the result, with no information about the key in the result, but the result after the key.\n    \n- count: Optional. The count of returned items."
+			},
+			"response": []
+		},
+		{
+			"name": "findstorage",
+			"id": "c5e78f7b-a835-451b-9b7a-c678876920b3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1,\r\n    \"method\": \"findstorage\",\r\n    \"params\": [2, \"AQ==\", 0]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"description": "StartFragmentFinds storage items by contract ID or script hash and prefix.EndFragment\n\nYou must install the plugin [RpcServer](https://github.com/neo-project/neo-modules/releases) before you can invoke the method.\n\n## Parameter Description\n\n- script_hash / contract_id / native_contract_name: Contract script hash or Contract ID or the native contract name.\n    \n    Such as: `-5`, `0xef4073a0f2b305a38ec4050e4d3d28bc40ea63f5`, `neotoken`.\n    \n    If you want to look up the name or ID of a native contract, you can use the [getnativecontracts](https://getnativecontracts.md) method.\n    \n    | Native Contract Name | ID | ScriptHash |\n    | --- | --- | --- |\n    | ContractManagement | \\-1 | 0xfffdc93764dbaddd97c48f252a53ea4643faa3fd |\n    | StdLib | \\-2 | 0xacce6fd80d44e1796aa0c2c625e9e4e0ce39efc0 |\n    | CryptoLib | \\-3 | 0x726cb6e0cd8628a1350a611384688911ab75f51b |\n    | LedgerContract | \\-4 | 0xda65b600f7124ce6c79950c1772a36403104f2be |\n    | NeoToken | \\-5 | 0xef4073a0f2b305a38ec4050e4d3d28bc40ea63f5 |\n    | GasToken | \\-6 | 0xd2a4cff31913016155e38e474a2c06d08be276cf |\n    | PolicyContract | \\-7 | 0xcc5e4edd9f5f8dba8bb65734541df7a1c081c67b |\n    | RoleManagement | \\-8 | 0x49cf4e5378ffcd4dec034fd98a174c5491e395e2 |\n    | OracleContract | \\-9 | 0xfe924b7cfe89ddd271abaf7210a80a7e11178758 |\n    \n- The Base64-encoded storage key prefix as the second element\n    \n- Optional, start index as the third element"
+			},
+			"response": []
+		},
+		{
+			"name": "getapplicationlog",
+			"id": "c0d50d30-c76d-424f-9ee7-5fb25d80d30e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1,\r\n    \"method\": \"findstorage\",\r\n    \"params\": [2, \"AQ==\", 0]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"description": "Returns the contract event information based on the specified txid. The contract event information is stored under the ApplicationLogs directory.\nYou must install the plugins [ApplicationLogs](https://github.com/neo-project/neo-modules/releases) and [LevelDBStore](https://github.com/neo-project/neo-modules/releases) before you can invoke the method.\n## Parameter Description\n\n- txid: Transaction ID\n\n- trigger type:  Optional. It has the following options:\n\n  - OnPersist\n  - PostPersist\n  - Application\n  - Verification\n  - System: OnPersist | PostPersist\n  - All: OnPersist | PostPersist | Verification | Application\n\n  It defaults to All. You can specify a trigger type.\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getbestblockhash",
+			"id": "e3a46504-a5c8-4fdf-ab8d-89a433eb4590",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"jsonrpc\": \"2.0\",\r\n   \"method\": \"getbestblockhash\",\r\n   \"params\":[],\r\n   \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"description": "Returns the latest block hash of the block chain.\n\nYou must install the plugin [RpcServer](https://github.com/neo-project/neo-modules/releases) before you can invoke the method."
+			},
+			"response": []
+		},
+		{
+			"name": "getblock",
+			"id": "224a6961-77dd-4ec4-af85-6c19425ac052",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"method\": \"getblock\",\r\n  \"params\": [26536],\r\n  \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"description": "Returns the corresponding block information according to the specified hash or index.\nThe usage of this method is as same as `getblockheader`. The only difference is that `getblockeader` gets the block header and `getblock` gets the complete block.\nStartFragmentYou must install the plugin [RpcServer](https://github.com/neo-project/neo-modules/releases) before you can invoke the method.EndFragment\n\n## Parameter Description\n\n* hash | index: Block hash string or block index (i.e. block height = number of blocks - 1).\n\n* verbose: Optional. The default value is false. \n  * When verbose is false, serialized information of the block is returned in a Base64-encoded string. If you need the detailed information, use SDK for deserialization. \n  * When verbose is true or 1, detailed information of the block is returned in Json format."
+			},
+			"response": []
+		}
+	]
+}
